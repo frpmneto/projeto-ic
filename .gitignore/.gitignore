@@ -36,7 +36,7 @@ void loop(){
        digitalWrite(Motor_E2, HIGH);       
        digitalWrite(Motor_D1, HIGH);
        digitalWrite(Motor_D2, HIGH);
-       delay(10000;
+       delay(700);
     }
 }
  
