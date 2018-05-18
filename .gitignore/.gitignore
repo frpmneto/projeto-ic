@@ -1,0 +1,42 @@
+int inPin = 2; 
+int valor = 0; 
+int Motor_E1 = 8;
+int Motor_E2 = 7;
+int Motor_EV = 6;
+int Motor_DV = 5;
+int Motor_D2 = 4;
+int Motor_D1 = 3;
+int vd=100;
+int ve=100;
+  
+
+ 
+void setup(){
+    pinMode(inPin, INPUT); 
+    pinMode(Motor_E1, OUTPUT);
+    pinMode(Motor_E2, OUTPUT);
+    pinMode(Motor_EV, OUTPUT);
+    pinMode(Motor_DV, OUTPUT);
+    pinMode(Motor_D2, OUTPUT);
+    pinMode(Motor_D1, OUTPUT);
+    analogWrite(Motor_EV, ve);
+    analogWrite(Motor_DV, vd);
+}
+ 
+void loop(){
+    valor = digitalRead(inPin);//realizando a leitura no sensor optico
+    if(valor==HIGH){
+       digitalWrite(Motor_E1, HIGH);
+       digitalWrite(Motor_E2, HIGH);       
+       digitalWrite(Motor_D1, LOW);
+       digitalWrite(Motor_D2, HIGH);
+    }
+    if(valor==LOW){
+       digitalWrite(Motor_E1, LOW);
+       digitalWrite(Motor_E2, HIGH);       
+       digitalWrite(Motor_D1, HIGH);
+       digitalWrite(Motor_D2, HIGH);
+       delay(10000;
+    }
+}
+ 
